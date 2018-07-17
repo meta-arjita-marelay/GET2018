@@ -91,12 +91,12 @@ int arr[20];
 void push ()
 {
 int element;
-top++;
-if(top==20)
+if(top==19)
 cout<<endl<<"Stack overflow";
 else{
 cout<<endl<<"Enter a number.";
 cin>>element;
+top++;
 arr[top]=element;
 }
 }
@@ -113,7 +113,7 @@ top--;
 
 void array_imp()
 {
-int ch,ch1,element, top=-1;
+int ch,ch1,element;
 
 do{
 cout<<endl<<"Enter your choice :"<<endl<<"1.Push"<<endl<<"2.Pop"<<endl<<"3.Top element"<<endl<<"4.Check if empty";
