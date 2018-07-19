@@ -11,7 +11,7 @@ public class Shopping {
 
 	}
 
-	public int returnProductQuantity() {
+	public int getProductQuantity() {
 		int i = 0;
 		for (Item prod : Cart) {
 			i++;

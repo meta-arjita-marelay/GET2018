@@ -3,22 +3,22 @@ package sc;
 import java.util.Calendar;
 
 public class FixedProductPromotion implements Promotion {
-	double minQuantity, discount;
+	double minPrice, discount;
 
 	public double getMinimumPrice() {
-		return minQuantity;
+		return minPrice;
 	}
 
-	public void setMinimumPrice() {
-		minQuantity = 1;
+	public void setMinimumPrice(double minPrice) {
+		this.minPrice = minPrice;
 	}
 
 	public double getFixedDiscount() {
 		return discount;
 	}
 
-	public void setFixedDiscount() {
-		discount = 100;
+	public void setFixedDiscount(double discount) {
+		this.discount = discount;
 	}
 
 	public boolean isPromotionApplicable(String code) {

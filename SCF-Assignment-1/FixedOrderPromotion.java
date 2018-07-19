@@ -9,16 +9,16 @@ public class FixedOrderPromotion implements Promotion {
 		return minPrice;
 	}
 
-	public void setMinimumPrice() {
-		minPrice = 500;
+	public void setMinimumPrice(double minPrice) {
+		this.minPrice = minPrice;
 	}
 
 	public double getFixedDiscount() {
 		return discount;
 	}
 
-	public void setFixedDiscount() {
-		discount = 300;
+	public void setFixedDiscount(double discount) {
+		this.discount = discount;
 	}
 
 	public boolean isPromotionApplicable(String code) {
