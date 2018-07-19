@@ -4,17 +4,18 @@ package Hexadecimal;
  * this class includes function which will convert hexadecimal number to decimal number and vice versa.
  */
 public class ConversionClass {
+	String hexCharacter = "0123456789ABCDEF";
+
 	/*
 	 * this function will convert decimal number to hexadecimal number.
 	 */
 	public String decimalToHexa(int decimalNumber) {
-		char hexaChar[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-				'A', 'B', 'C', 'D', 'E', 'F' };
 		int remainder;
 		String hexadecimalNumber = "";
 		while (decimalNumber != 0) {
 			remainder = decimalNumber % 16;
-			hexadecimalNumber = hexaChar[remainder] + hexadecimalNumber;
+			hexadecimalNumber = hexCharacter.charAt(remainder)
+					+ hexadecimalNumber;
 			decimalNumber = decimalNumber / 16;
 		}
 		return hexadecimalNumber;

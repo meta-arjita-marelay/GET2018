@@ -8,11 +8,15 @@ public class Operations {
 	 * to decimal then result will be converted to hexadecimal again.
 	 */
 	public String addHexadecimal(String hexaValue1, String hexaValue2) {
-		int decimalValue1 = convert.hexaToDecimal(hexaValue1);
-		int decimalValue2 = convert.hexaToDecimal(hexaValue2);
-		int decimalValue3 = decimalValue1 + decimalValue2;
-		String hexaValue3 = convert.decimalToHexa(decimalValue3);
-		return hexaValue3;
+		if (isHexadecimal(hexaValue1) && isHexadecimal(hexaValue2)) {
+			int decimalValue1 = convert.hexaToDecimal(hexaValue1);
+			int decimalValue2 = convert.hexaToDecimal(hexaValue2);
+			int decimalResult = decimalValue1 + decimalValue2;
+			String hexaResult = convert.decimalToHexa(decimalResult);
+			return hexaResult;
+		} else {
+			return ("invalid number");
+		}
 	}
 
 	/*
@@ -20,11 +24,15 @@ public class Operations {
 	 * to decimal then result will be converted to hexadecimal again.
 	 */
 	public String subtractHexadecimal(String hexaValue1, String hexaValue2) {
-		int decimalValue1 = convert.hexaToDecimal(hexaValue1);
-		int decimalValue2 = convert.hexaToDecimal(hexaValue2);
-		int decimalValue3 = decimalValue1 - decimalValue2;
-		String hexaValue3 = convert.decimalToHexa(decimalValue3);
-		return hexaValue3;
+		if (isHexadecimal(hexaValue1) && isHexadecimal(hexaValue2)) {
+			int decimalValue1 = convert.hexaToDecimal(hexaValue1);
+			int decimalValue2 = convert.hexaToDecimal(hexaValue2);
+			int decimalResult = decimalValue1 - decimalValue2;
+			String hexaResult = convert.decimalToHexa(decimalResult);
+			return hexaResult;
+		} else {
+			return ("invalid number");
+		}
 	}
 
 	/*
@@ -32,11 +40,15 @@ public class Operations {
 	 * to decimal then result will be converted to hexadecimal again.
 	 */
 	public String multiplyHexadecimal(String hexaValue1, String hexaValue2) {
-		int decimalValue1 = convert.hexaToDecimal(hexaValue1);
-		int decimalValue2 = convert.hexaToDecimal(hexaValue2);
-		int decimalValue3 = decimalValue1 * decimalValue2;
-		String hexaValue3 = convert.decimalToHexa(decimalValue3);
-		return hexaValue3;
+		if (isHexadecimal(hexaValue1) && isHexadecimal(hexaValue2)) {
+			int decimalValue1 = convert.hexaToDecimal(hexaValue1);
+			int decimalValue2 = convert.hexaToDecimal(hexaValue2);
+			int decimalResult = decimalValue1 * decimalValue2;
+			String hexaResult = convert.decimalToHexa(decimalResult);
+			return hexaResult;
+		} else {
+			return ("invalid number");
+		}
 	}
 
 	/*
@@ -44,12 +56,17 @@ public class Operations {
 	 * to decimal then result will be converted to hexadecimal again.
 	 */
 	public String divideHexadecimal(String hexaValue1, String hexaValue2) {
-		int decimalValue1 = convert.hexaToDecimal(hexaValue1);
-		int decimalValue2 = convert.hexaToDecimal(hexaValue2);
-		int decimalValue3 = decimalValue1 / decimalValue2;
-		String hexaValue3 = convert.decimalToHexa(decimalValue3);
-		return hexaValue3;
+		if (isHexadecimal(hexaValue1) && isHexadecimal(hexaValue2)) {
+			int decimalValue1 = convert.hexaToDecimal(hexaValue1);
+			int decimalValue2 = convert.hexaToDecimal(hexaValue2);
+			int decimalResult = decimalValue1 / decimalValue2;
+			String hexaResult = convert.decimalToHexa(decimalResult);
+			return hexaResult;
+		} else {
+			return ("invalid number");
+		}
 	}
+
 	/*
 	 * this function will check if two hexadecimal numbers are equal
 	 */
@@ -63,8 +80,10 @@ public class Operations {
 		}
 		return false;
 	}
+
 	/*
-	 * this function will check if first hexadecimal number is greater than other
+	 * this function will check if first hexadecimal number is greater than
+	 * other
 	 */
 	public boolean greaterHexadecimal(String hexaValue1, String hexaValue2) {
 		hexaValue1 = removeLeadingZero(hexaValue1);
@@ -76,9 +95,10 @@ public class Operations {
 		}
 		return false;
 	}
-	
+
 	/*
-	 * this function will check if first hexadecimal number is smaller than other
+	 * this function will check if first hexadecimal number is smaller than
+	 * other
 	 */
 	public boolean smallerHexadecimal(String hexaValue1, String hexaValue2) {
 		hexaValue1 = removeLeadingZero(hexaValue1);
@@ -90,6 +110,7 @@ public class Operations {
 		}
 		return false;
 	}
+
 	/*
 	 * this function will remove the leading zeroes from hexadecimal number
 	 */
@@ -98,6 +119,7 @@ public class Operations {
 
 		return hexaValue;
 	}
+
 	/*
 	 * this function will check if number is hexadecimal or not.
 	 */
