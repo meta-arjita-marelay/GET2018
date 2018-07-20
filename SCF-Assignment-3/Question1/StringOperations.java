@@ -13,23 +13,19 @@ public class StringOperations {
 	 *            string should be not null and case sensitive
 	 * @param inputString2
 	 *            string should be not null and case sensitive
-	 * @return
+	 * @return will return true if strings are equal
 	 */
 	public boolean compareStrings(String inputString1, String inputString2) {
 		int i = 0;
 		if (inputString1.length() == inputString2.length()) {
 			while (i < inputString2.length()) {
-				if (inputString1.charAt(i) == inputString2.charAt(i)) {
-					i++;
-				} else {
-					break;
+				if (inputString1.charAt(i) != inputString2.charAt(i)) {
+					return false;
 				}
+				i++;
 			}
 		}
-		if (i == ((inputString2.length()))) {
-			return true;
-		}
-		return false;
+		return true;
 	}
 
 	/**
