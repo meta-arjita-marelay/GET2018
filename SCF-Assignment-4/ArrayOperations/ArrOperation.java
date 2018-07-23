@@ -10,6 +10,9 @@ public class ArrOperation {
 	 */
 	public static int calculateLargestMirror(int[] array) {
 		int size = array.length - 1;
+		if (size == 0) {
+			throw new AssertionError("enter valid array");
+		}
 		int j = size;
 		int i = 0;
 		int count = 0;
