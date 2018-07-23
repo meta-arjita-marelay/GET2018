@@ -16,7 +16,7 @@ public class Area {
 	 * @return area of triangle
 	 */
 	public double triangleArea(double width, double height) {
-		if (width <= 0 && height <= 0) {
+		if (width <= 0 || height <= 0) {
 			throw new ArithmeticException("You entered invalid values.");
 		} else {
 			return 0.5 * width * height;
@@ -32,7 +32,7 @@ public class Area {
 	 * @return area of rectangle
 	 */
 	public double rectangleArea(double width, double height) {
-		if (width <= 0 && height <= 0) {
+		if (width <= 0 || height <= 0) {
 			throw new ArithmeticException("You entered invalid values.");
 		} else {
 			return width * height;
