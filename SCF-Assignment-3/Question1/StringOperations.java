@@ -8,11 +8,12 @@ package Question1;
  */
 public class StringOperations {
 	/**
+	 * this method will compare two strings
 	 * 
 	 * @param inputString1
-	 *            string should be not null and case sensitive
+	 *            first input string
 	 * @param inputString2
-	 *            string should be not null and case sensitive
+	 *            second input string
 	 * @return will return true if strings are equal
 	 */
 	public boolean compareStrings(String inputString1, String inputString2) {
@@ -24,14 +25,16 @@ public class StringOperations {
 				}
 				i++;
 			}
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	/**
+	 * This method will reverse the input string
 	 * 
 	 * @param inputString
-	 *            string should be not null and case sensitive
+	 *            input string
 	 * @return reverse of string
 	 */
 	public String reverseString(String inputString) {
@@ -44,9 +47,10 @@ public class StringOperations {
 	}
 
 	/**
+	 * this method will change cases of input string
 	 * 
 	 * @param inputString
-	 *            string should be not null and case sensitive
+	 *            input string
 	 * @return interchange of cases
 	 */
 	public String changeCase(String inputString) {
@@ -65,9 +69,10 @@ public class StringOperations {
 	}
 
 	/**
+	 * this method will find the largest word in string
 	 * 
 	 * @param inputString
-	 *            string should be not null and case sensitive
+	 *            input string
 	 * @return largest word of string
 	 */
 	public String largestWord(String inputString) {
