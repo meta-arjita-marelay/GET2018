@@ -3,9 +3,10 @@ package ArrayOperations;
 public class ArrOperation {
 	// Part1
 	/**
+	 * This method calculate the length of largest mirror in array
 	 * 
 	 * @param array
-	 *            should not be empty
+	 *            input array
 	 * @return size of largest mirror section in array
 	 */
 	public static int calculateLargestMirror(int[] array) {
@@ -36,9 +37,10 @@ public class ArrOperation {
 
 	// Part 2
 	/**
+	 * This method calculates the number of clumps in input array
 	 * 
 	 * @param array
-	 *            should not be empty
+	 *            input array
 	 * @return number of clumps in input array
 	 */
 	public static int calculatearrayClumps(int[] array) {
@@ -64,16 +66,17 @@ public class ArrOperation {
 	// Part 3
 
 	/**
-	 *
+	 * This method calculates the count of x in array
+	 * 
 	 * @param x
-	 *            should be present in array
+	 *            number whose successor needs to be fixed
 	 * @param array
-	 *            array should not be null
+	 *            input array
 	 * @param size
-	 *            size should not be negative
+	 *            size of input array
 	 * @return number of x
 	 */
-	public static int numOfX(int x, int[] array, int size) {
+	private static int numOfX(int x, int[] array, int size) {
 		int count = 0;
 		for (int i = 0; i < size; i++) {
 			if (array[i] == x) {
@@ -84,16 +87,17 @@ public class ArrOperation {
 	}
 
 	/**
+	 * This method calculates the count of y in array
 	 * 
 	 * @param y
-	 *            should be present in array
+	 *            number which needs to be fixed as successor
 	 * @param array
-	 *            array should not be null
+	 *            input array
 	 * @param size
-	 *            size should not be negative
+	 *            size of input array
 	 * @return number of y
 	 */
-	public static int numOfY(int y, int[] array, int size) {
+	private static int numOfY(int y, int[] array, int size) {
 		int count = 0;
 		for (int i = 0; i < size; i++) {
 			if (array[i] == y) {
@@ -104,16 +108,17 @@ public class ArrOperation {
 	}
 
 	/**
+	 * This method checks if two consecutive x present in array
 	 * 
 	 * @param x
-	 *            should be present in array
+	 *            number whose successor needs to be fixed
 	 * @param array
-	 *            should not be null
+	 *            input array
 	 * @param size
-	 *            should not be negative
-	 * @return true if there are two consecutive 4
+	 *            size of input array
+	 * @return true if there are two consecutive x
 	 */
-	public static boolean isConsecutiveX(int x, int[] array, int size) {
+	private static boolean isConsecutiveX(int x, int[] array, int size) {
 		for (int i = 0; i < size - 1; i++) {
 			if (array[i] == x && array[i + 1] == x) {
 				return true;
@@ -123,16 +128,17 @@ public class ArrOperation {
 	}
 
 	/**
+	 * This method checks if x is last element of array
 	 * 
 	 * @param x
-	 *            should be present in array
+	 *            number whose successor needs to be fixed
 	 * @param array
-	 *            should not be null
+	 *            input array
 	 * @param size
-	 *            should not be negative
+	 *            size of input array
 	 * @return true if x is last element
 	 */
-	public static boolean isXLastElement(int x, int[] array, int size) {
+	private static boolean isXLastElement(int x, int[] array, int size) {
 		if (array[size - 1] == x) {
 			return true;
 		} else {
@@ -141,18 +147,20 @@ public class ArrOperation {
 	}
 
 	/**
+	 * this method finds the location of y which needs to be fixed as successor
+	 * of x
 	 * 
 	 * @param y
-	 *            should be present in array
+	 *            number which needs to be fixed as successor
 	 * @param x
-	 *            should be present in array
+	 *            number whose successor needs to be fixed
 	 * @param array
-	 *            should not be null
+	 *            input array
 	 * @param size
-	 *            should not be negative
+	 *            size of input array
 	 * @return location of y which is to be swapped
 	 */
-	public static int locationOfY(int y, int x, int[] array, int size) {
+	private static int locationOfY(int y, int x, int[] array, int size) {
 		if (array[0] == y) {
 			return 0;
 		}
@@ -165,13 +173,15 @@ public class ArrOperation {
 	}
 
 	/**
+	 * This method will fix x and y in array such that every y is successor of
+	 * every x
 	 * 
 	 * @param x
-	 *            should be present in array
+	 *            number whose successor needs to be fixed
 	 * @param y
-	 *            should be present in array
+	 *            number which needs to be fixed as successor
 	 * @param array
-	 *            should not be null
+	 *            input array
 	 * @return the array with y in adjacent right of x
 	 */
 	public static int[] fixXY(int x, int y, int[] array) {
@@ -200,9 +210,11 @@ public class ArrOperation {
 	// Part 4
 
 	/**
+	 * This function will calculate index from where array can be split in two
+	 * equal array
 	 * 
 	 * @param array
-	 *            should not be empty
+	 *            input array
 	 * @return index if there is place to split the array in two equal sum
 	 *         otherwise -1
 	 */
