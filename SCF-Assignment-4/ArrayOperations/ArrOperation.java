@@ -69,7 +69,7 @@ public class ArrOperation {
 	 * This method calculates the count of x in array
 	 * 
 	 * @param x
-	 *            number whose successor needs to be fixed
+	 *            number whose number of occurence need to be calculated
 	 * @param array
 	 *            input array
 	 * @param size
@@ -90,7 +90,7 @@ public class ArrOperation {
 	 * This method calculates the count of y in array
 	 * 
 	 * @param y
-	 *            number which needs to be fixed as successor
+	 *            number whose number of occurence need to be calculated
 	 * @param array
 	 *            input array
 	 * @param size
