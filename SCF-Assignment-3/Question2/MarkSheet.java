@@ -1,7 +1,8 @@
 package Question2;
 
 /**
- * this class contains function which will perform the different operations
+ * this class contains function which will perform the different operations like
+ * average , maximum , minimum of grade or percentage of passed student
  * 
  * @author Arjita
  *
