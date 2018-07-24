@@ -10,25 +10,13 @@ import java.util.Scanner;
  *
  */
 public class AreaCalculate {
-	/**
-	 * 
-	 * @param objectArea
-	 *            object of area class
-	 * @param areaOfTriangle
-	 *            will store the return value of triangle area
-	 * @param areaOfRectangle
-	 *            will store the return value of rectangle area
-	 * @param areaOfSquare
-	 *            will store the return value of square area
-	 * @param areaOfCircle
-	 *            will store the return value of circle area
-	 */
+
 	public static void main(String[] args) {
 		Area objectArea = new Area();
 		Scanner scan = new Scanner(System.in);
 		int choice;
 		System.out
-				.println("Enter your choice...\n1...Area of triangle\n2...Area of rectangle\n3...Area of Squaren4....area of circle");
+				.println("Enter your choice...\n1...Area of triangle\n2...Area of rectangle\n3...Area of Square\n4....area of circle");
 		choice = scan.nextInt();
 		switch (choice) {
 		case 1:
