@@ -77,25 +77,25 @@ public class StringOperations {
 	 */
 	public String largestWord(String inputString) {
 		int count = 0;
-		String intermediateCode = "";
-		String largestCode = "";
+		String intermediateWord = "";
+		String largestWord = "";
 		int maxLength = 0;
 		for (int i = 0; i < inputString.length(); i++) {
 			if (inputString.charAt(i) != ' ') {
 				count++;
-				intermediateCode = intermediateCode + inputString.charAt(i);
+				intermediateWord = intermediateWord + inputString.charAt(i);
 			} else {
 
 				count = 0;
-				intermediateCode = "";
+				intermediateWord = "";
 			}
 			if (maxLength <= count) {
 				maxLength = count;
-				largestCode = intermediateCode;
+				largestWord = intermediateWord;
 			}
 
 		}
-		return largestCode;
+		return largestWord;
 	}
 
 }
