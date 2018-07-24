@@ -9,7 +9,7 @@ public class MarkSheetTest {
 	int[] student = new int[] { 10, 20, 30, 40 };
 
 	@Test
-	public void testForAverage() {
+	public void testAverage() {
 		float result1 = markSheet.averageOfGrade(student, 4);
 		assertEquals(result1, 25, 0.0f);
 		float result2 = markSheet.averageOfGrade(student, 4);
@@ -18,14 +18,14 @@ public class MarkSheetTest {
 	}
 
 	@Test(expected = ArithmeticException.class)
-	public void testForAverageError() {
+	public void testAverageError() {
 		int[] student1 = new int[] { 10, 20, 30, 40, -1 };
 		float result1 = markSheet.averageOfGrade(student1, 5);
 		assertEquals(result1, 25, 0.0f);
 	}
 
 	@Test
-	public void testForMaximum() {
+	public void testMaximum() {
 		int result1 = markSheet.maximumOfGrade(student, 4);
 		assertEquals(result1, 40);
 		int result2 = markSheet.maximumOfGrade(student, 4);
@@ -34,14 +34,14 @@ public class MarkSheetTest {
 	}
 
 	@Test(expected = ArithmeticException.class)
-	public void testForMaximumError() {
+	public void testMaximumError() {
 		int[] student1 = new int[] { 10, 20, 30, 40, -1 };
 		float result1 = markSheet.maximumOfGrade(student1, 5);
 		assertEquals(result1, 25, 0.0f);
 	}
 
 	@Test
-	public void testForMinimum() {
+	public void testMinimum() {
 		int result1 = markSheet.minimumOfGrade(student, 4);
 		assertEquals(result1, 10);
 		int result2 = markSheet.minimumOfGrade(student, 4);
@@ -50,14 +50,14 @@ public class MarkSheetTest {
 	}
 
 	@Test(expected = ArithmeticException.class)
-	public void testForMinimumError() {
+	public void testMinimumError() {
 		int[] student1 = new int[] { 10, 20, 30, 40, -1 };
 		float result1 = markSheet.maximumOfGrade(student1, 5);
 		assertEquals(result1, 25, 0.0f);
 	}
 
 	@Test
-	public void testForPassPercentage() {
+	public void testPassPercentage() {
 		float result1 = markSheet.percentageofPass(student, 4);
 		assertEquals(result1, 25, 0.0f);
 		float result2 = markSheet.percentageofPass(student, 4);
@@ -66,7 +66,7 @@ public class MarkSheetTest {
 	}
 
 	@Test(expected = ArithmeticException.class)
-	public void testForPassPercentageError() {
+	public void testPassPercentageError() {
 		int[] student1 = new int[] { 10, 20, 30, 40, -1 };
 		float result1 = markSheet.maximumOfGrade(student1, 5);
 		assertEquals(result1, 25, 0.0f);
