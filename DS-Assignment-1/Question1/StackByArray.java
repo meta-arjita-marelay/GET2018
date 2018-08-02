@@ -7,9 +7,9 @@ package Question1;
  * @author Arjita
  *
  */
-public class StackByArray implements Stack {
+public class StackByArray<E> implements Stack<E> {
 	private static final int MAX = 2;// length of stack
-	private int[] array = new int[MAX];// stack array declaration
+	private E[] array =(E[]) new Object[MAX];// stack array declaration
 	private int top;// top index of stack
 
 	/**
@@ -20,7 +20,7 @@ public class StackByArray implements Stack {
 	}
 
 	@Override
-	public boolean push(int element) {
+	public boolean push(E element) {
 		if (top >= (MAX - 1)) {
 			throw new AssertionError("stack full");
 		}
@@ -30,11 +30,11 @@ public class StackByArray implements Stack {
 	}
 
 	@Override
-	public int pop() {
+	public E pop() {
 		if (top < 0) {
 			throw new AssertionError("stack empty");
 		}
-		int x = array[top--];
+		E x = array[top--];
 		return x;
 
 	}
@@ -45,7 +45,7 @@ public class StackByArray implements Stack {
 	}
 
 	@Override
-	public int topElement() {
+	public E topElement() {
 		if (top == -1) {
 			throw new AssertionError("stack empty");
 		}

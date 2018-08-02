@@ -6,8 +6,8 @@ package linkedListNode;
  * @author Arjita
  *
  */
-public class Node {
-	private int data;// element value of node
+public class Node<E> {
+	private E data;// element value of node
 	private Node link;// link stores the value of next node
 
 	/**
@@ -18,12 +18,12 @@ public class Node {
 	 * @param link
 	 *            pointer to store next node address
 	 */
-	public Node(int data, Node link) {
+	public Node(E data, Node link) {
 		this.data = data;
 		this.link = link;
 	}
 
-	public void setData(int data) {
+	public void setData(E data) {
 		this.data = data;
 	}
 
@@ -31,7 +31,7 @@ public class Node {
 		this.link = link;
 	}
 
-	public int getData() {
+	public E getData() {
 		return data;
 	}
 

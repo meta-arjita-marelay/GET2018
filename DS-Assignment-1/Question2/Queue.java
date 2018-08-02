@@ -7,7 +7,7 @@ package Question2;
  * @author Arjita
  *
  */
-public interface Queue {
+public interface Queue<E> {
 	/**
 	 * insert method will insert element in queue at last
 	 * 
@@ -15,14 +15,14 @@ public interface Queue {
 	 *            which is to be inserted in queue
 	 * @return true if it can be inserted else will throw error
 	 */
-	public boolean insert(int element);
+	public boolean insert(E element);
 
 	/**
 	 * delete method will delete first element from queue
 	 * 
 	 * @return element which is deleted
 	 */
-	public int delete();
+	public E delete();
 
 	/**
 	 * isEmpty method will check if queue is empty

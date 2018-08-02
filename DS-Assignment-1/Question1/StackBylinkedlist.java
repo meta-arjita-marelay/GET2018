@@ -9,7 +9,7 @@ import linkedListNode.*;
  * @author Arjita
  *
  */
-public class StackBylinkedlist implements Stack {
+public class StackBylinkedlist<E> implements Stack<E> {
 	private Node top;// pointer to store top element of stack
 
 	/**
@@ -20,7 +20,7 @@ public class StackBylinkedlist implements Stack {
 	}
 
 	@Override
-	public boolean push(int element) {
+	public boolean push(E element) {
 		Node node = new Node(element, null);
 		if (top == null)
 			top = node;
@@ -32,13 +32,13 @@ public class StackBylinkedlist implements Stack {
 	}
 
 	@Override
-	public int pop() {
+	public E pop() {
 		if (isEmpty()) {
 			throw new AssertionError("No element exist in stack");
 		}
 		Node ptr = top;
 		top = ptr.getLink();
-		return ptr.getData();
+		return ((E) ptr.getData());
 	}
 
 	@Override
@@ -47,11 +47,11 @@ public class StackBylinkedlist implements Stack {
 	}
 
 	@Override
-	public int topElement() {
+	public E topElement() {
 		if (isEmpty()) {
 			throw new AssertionError("No element exist in stack");
 		}
-		return top.getData();
+		return ((E) top.getData());
 	}
 
 }

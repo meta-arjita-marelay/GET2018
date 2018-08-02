@@ -9,7 +9,7 @@ import linkedListNode.*;
  * @author Arjita
  *
  */
-public class QueueByLinkedlist implements Queue {
+public class QueueByLinkedlist<E> implements Queue<E> {
 	Node front, rear;// node references to front and last elemnt of queue
 
 	/**
@@ -20,7 +20,7 @@ public class QueueByLinkedlist implements Queue {
 	}
 
 	@Override
-	public boolean insert(int element) {
+	public boolean insert(E element) {
 		Node node = new Node(element, null);
 		if (isEmpty()) {
 			front = node;
@@ -33,11 +33,11 @@ public class QueueByLinkedlist implements Queue {
 	}
 
 	@Override
-	public int delete() {
+	public E delete() {
 		if (isEmpty()) {
 			throw new AssertionError("queue full");
 		}
-		int element = front.getData();
+		E element = ((E)front.getData());
 		front.setLink(front.getLink());
 		return element;
 	}
