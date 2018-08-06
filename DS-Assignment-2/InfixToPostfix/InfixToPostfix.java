@@ -26,7 +26,6 @@ public class InfixToPostfix {
 	 *            input expression
 	 */
 	public InfixToPostfix(String infixExpression) {
-		System.out.println("hi");
 		this.infixExpression = infixExpression;
 	}
 
@@ -65,7 +64,6 @@ public class InfixToPostfix {
 		while (!stack.isEmpty()) {
 			postfixExpression += stack.pop();
 		}
-		System.out.println(postfixExpression);
 		return postfixExpression;
 	}
 
