@@ -1,5 +1,7 @@
 package question2;
 
+import Question1.InvalidInput;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
