@@ -2,6 +2,7 @@ package nestedList;
 
 import java.io.FileNotFoundException;
 
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import org.json.simple.parser.ParseException;
  */
 public class NestedListOperation implements NestedList {
 	private List<Object> nestedList = new ArrayList<Object>();// nested List
-	int value;// value evaluated for string input
+	long value;// value evaluated for string input
 
 	/**
 	 * constructor of class
@@ -60,7 +61,7 @@ public class NestedListOperation implements NestedList {
 
 		for (Object key : jsonObject.keySet()) {
 			if (jsonObject.get(key) instanceof Long) {
-				long value = (Long) jsonObject.get(key);
+				long value = (long) jsonObject.get(key);
 				nestedList.add(value);
 			} else {
 				JSONObject newJson = (JSONObject) jsonObject.get(key);
@@ -73,7 +74,7 @@ public class NestedListOperation implements NestedList {
 	}
 
 	@Override
-	public int sumOfAllValues() {
+	public long sumOfAllValues() {
 		return sumOfAllValues(nestedList);
 
 	}
@@ -85,13 +86,13 @@ public class NestedListOperation implements NestedList {
 	 *            whose value's sum is to be calculated
 	 * @return sum of all values of nested list
 	 */
-	private int sumOfAllValues(List<Object> nestedList) {
-		int sum = 0;
+	private long sumOfAllValues(List<Object> nestedList) {
+		long sum = 0;
 		for (Object object : nestedList) {
 			if (object instanceof List) {
 				sum += sumOfAllValues((List<Object>) object);
-			} else if (object instanceof Integer) {
-				sum += (Integer) object;
+			} else if (object instanceof Long) {
+				sum += (long) object;
 			} else {
 				throw new AssertionError();
 			}
@@ -101,7 +102,7 @@ public class NestedListOperation implements NestedList {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public int largestValue() {
+	public long largestValue() {
 		return largestValue(nestedList);
 	}
 
@@ -112,14 +113,14 @@ public class NestedListOperation implements NestedList {
 	 *            whose largest value is to be find
 	 * @return largest value of nested list
 	 */
-	private int largestValue(List<Object> nestedList) {
-		int max = 0;
-		int temp = 0;
+	private long largestValue(List<Object> nestedList) {
+		long max = 0;
+		long temp = 0;
 		for (Object object : nestedList) {
 			if (object instanceof List) {
 				temp = largestValue((List<Object>) object);
-			} else if (object instanceof Integer) {
-				temp = (Integer) object;
+			} else if (object instanceof Long) {
+				temp = (long) object;
 			} else {
 				throw new AssertionError();
 			}
@@ -150,8 +151,8 @@ public class NestedListOperation implements NestedList {
 				if (searchValue((List<Object>) object, element)) {
 					return true;
 				}
-			} else if (object instanceof Integer) {
-				if ((Integer) object == element) {
+			} else if (object instanceof Long) {
+				if ((long) object == element) {
 					flag = true;
 					return flag;
 				}
@@ -175,7 +176,7 @@ public class NestedListOperation implements NestedList {
 	 * @return value which is present at required location
 	 */
 	@SuppressWarnings("unchecked")
-	public int getValue(String pattern) {
+	public long getValue(String pattern) {
 		getvalueRecursive(nestedList, pattern);
 		return value;
 	}
@@ -192,7 +193,7 @@ public class NestedListOperation implements NestedList {
 	 */
 	@SuppressWarnings("unchecked")
 	private void getvalueRecursive(List<Object> nestedList, String pattern) {
-		int lengthOfString = pattern.length();
+		long lengthOfString = pattern.length();
 
 		if (lengthOfString > 1) {
 			if (pattern.charAt(0) == 'H' || pattern.charAt(0) == 'h') {
@@ -214,13 +215,13 @@ public class NestedListOperation implements NestedList {
 				throw new AssertionError("Wrong input3");
 		} else {
 			if (pattern.charAt(0) == 'H' || pattern.charAt(0) == 'h') {
-				if (nestedList.get(0) instanceof Integer)
-					value = (int) nestedList.get(0);
+				if (nestedList.get(0) instanceof Long)
+					value = (long) nestedList.get(0);
 				else
 					throw new AssertionError("Wrong input4");
 			} else if (pattern.charAt(0) == 'T' || pattern.charAt(0) == 't') {
-				if (nestedList.get(1) instanceof Integer)
-					value = (int) nestedList.get(1);
+				if (nestedList.get(1) instanceof Long)
+					value = (long) nestedList.get(1);
 				else
 					throw new AssertionError("Wrong input5");
 			} else
