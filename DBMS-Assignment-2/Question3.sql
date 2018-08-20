@@ -56,9 +56,11 @@ UPDATE order_status os
 SET os.status="shipped"
 WHERE os.order_id IN
 (
-SELECT orders.order_id 
-from orders 
-where orders.placed_date=CURDATE()
+SELECT o.order_id 
+from orders o LEFT JOIN order_status os
+ON o.order_id=os.order_id
+WHERE DATE(o.placed_date)=CURDATE()
+AND os.status="placed"
 )
 LIMIT 20 ;
 
