@@ -2,14 +2,14 @@
 SELECT u.user_id , u.first_name , COUNT(o.user_id)
 FROM users u INNER JOIN orders o
 ON u.user_id=o.user_id
-WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 1 MONTH))
+WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 30 DAY))
 GROUP BY o.user_id;
 
 /*Display the top 10 Shoppers who generated maximum number of revenue in last 30 days*/
 SELECT u.user_id, u.first_name , SUM(o.bill_amount) as sum
 FROM orders o INNER JOIN users u
 ON o.user_id = u.user_id
-WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 1 MONTH))
+WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 30 DAY))
 GROUP BY o.user_id
 ORDER BY sum DESC
 LIMIT 10;
@@ -20,9 +20,9 @@ FROM product p INNER JOIN order_status os
 ON p.product_id = os.product_id
 INNER JOIN orders o
 ON os.order_id = o.order_id
-WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 2 MONTH))
+WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 60 DAY))
 GROUP BY os.product_id
-ORDER BY productcount
+ORDER BY productcount DESC
 LIMIT 20;
 
 /*Display Monthly sales revenue of the StoreFront for last 6 months. It should display each month’s sale*/
@@ -39,11 +39,11 @@ AFTER description;
 
 UPDATE product
 SET productstate="inactive"
-WHERE product.product_id IN 
+WHERE product.product_id NOT IN 
                     (SELECT os.product_id
                      FROM orders o INNER JOIN order_status os
                      ON o.order_id=os.order_id
-                     WHERE o.placed_date < (DATE_SUB(CURDATE(), INTERVAL 3 MONTH))
+                     WHERE o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 90 DAY))
                      );
                      
 /*Given a category search keyword, display all the Products present in this category/categories*/
@@ -62,32 +62,3 @@ WHERE os.status="cancelled"
 GROUP BY os.product_id
 ORDER BY cancelcount DESC
 LIMIT 10;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

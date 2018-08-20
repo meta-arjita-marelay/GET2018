@@ -1,4 +1,3 @@
-use storefront;
 /*Display the list of products (Id, Title, Count of Categories) which fall in more than one Categories*/
 SELECT p.product_id , p.product_name , COUNT(pcr.product_id) AS countcategories
 FROM product p INNER JOIN product_category_relation pcr
@@ -20,21 +19,3 @@ SELECT c.category_id , c.category_name , COUNT(pcr.category_id)
 FROM category c INNER JOIN product_category_relation pcr
 ON c.category_id = pcr.category_id
 GROUP BY pcr.category_id;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

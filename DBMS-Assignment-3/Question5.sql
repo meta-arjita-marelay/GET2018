@@ -9,8 +9,8 @@ FROM orders o, product p, users u, order_status os
    WHERE os.order_id = o.order_id 
    AND o.order_id = u.user_id 
    AND os.product_id = p.product_id 
-   AND o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 2 MONTH))
-   ORDER BY os.order_id DESC LIMIT 60;
+   AND o.placed_date > (DATE_SUB(CURDATE(), INTERVAL 60 DAY))
+   ORDER BY os.order_id;
        
        
 SELECT * FROM displayorderinformation;
@@ -26,11 +26,3 @@ FROM displayorderinformation
 GROUP BY product_id
 ORDER BY productcount
 LIMIT 5;
-
-
-
-
-
-
-
-
