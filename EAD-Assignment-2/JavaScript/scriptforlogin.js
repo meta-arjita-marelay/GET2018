@@ -6,7 +6,7 @@ function checkValidationLogin(){
 	{
 		var emailstr="arjita101@gmail.com";
 		var pwdstr="Arjita@1234";
-		if(email.equals(emailstr) && pwd.equals(pwdstr))
+		if(email == emailstr && pwd == pwdstr)
 		{
 			document.getElementById("form").submit();
 			return true;
@@ -24,7 +24,7 @@ function checkValidationLogin(){
 function isEmailValidLogin() {
 	var email = document.getElementById("email").value;
 	var regexpression = new RegExp(
-			"^([a-zA-Z0-9_]{2,})@([a-zA-Z0-9_]{2,})\.([a-zA-Z]{2,5})$");
+			"^([a-zA-Z0-9_\.]{2,})@([a-zA-Z0-9_]{2,})\.([a-zA-Z]{2,5})$");
 	if (regexpression.test(email)) {
 		return true;
 	} else {
