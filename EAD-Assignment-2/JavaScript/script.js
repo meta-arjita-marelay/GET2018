@@ -32,7 +32,7 @@ function isLNameValid() {
 function isEmailValid() {
 	var email = document.getElementById("email").value;
 	var regexpression = new RegExp(
-			"^([a-zA-Z0-9_]{2,})@([a-zA-Z0-9_]{2,})\.([a-zA-Z]{2,5})$");
+			"^([a-zA-Z0-9_\.]{2,})@([a-zA-Z0-9_]{2,})\.([a-zA-Z]{2,5})$");
 	if (regexpression.test(email)) {
 		return true;
 	} else {
