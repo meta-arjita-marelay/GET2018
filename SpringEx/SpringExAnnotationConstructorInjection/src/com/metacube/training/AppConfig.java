@@ -5,15 +5,15 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-	
+
 	@Bean
-	public TextEditor textEditor(){
+	public TextEditor textEditor() {
 		TextEditor textEditor = new TextEditor(spellChecker());
 		return textEditor;
 	}
-	
+
 	@Bean
-	public SpellChecker spellChecker(){
+	public SpellChecker spellChecker() {
 		return new SpellChecker(false);
 	}
 }

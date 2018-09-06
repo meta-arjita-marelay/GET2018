@@ -1,8 +1,9 @@
 package com.metacube.training;
 
 /**
- * Copyright (c) 2018 Metacube.com. All rights reserved.
- * This is the Text Editor class.
+ * Copyright (c) 2018 Metacube.com. All rights reserved. This is the Text Editor
+ * class.
+ * 
  * @author Arjita
  *
  */
@@ -14,7 +15,7 @@ public class TextEditor {
 	public TextEditor(SpellChecker spellChecker) {
 		this.spellChecker = spellChecker;
 	}
-	
+
 	public void setSpellChecker(SpellChecker spellChecker) {
 		this.spellChecker = spellChecker;
 	}
@@ -22,7 +23,7 @@ public class TextEditor {
 	public SpellChecker getSpellChecker() {
 		return spellChecker;
 	}
-	
+
 	public void spellCheck() {
 		spellChecker.checkStatus();
 	}

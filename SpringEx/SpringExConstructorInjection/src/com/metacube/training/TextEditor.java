@@ -1,8 +1,9 @@
 package com.metacube.training;
 
 /**
- * Copyright (c) 2018 Metacube.com. All rights reserved.
- * This is the Text Editor class.
+ * Copyright (c) 2018 Metacube.com. All rights reserved. This is the Text Editor
+ * class.
+ * 
  * @author Arjita
  *
  */
