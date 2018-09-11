@@ -47,7 +47,11 @@ public class JobTitleDAO implements DAOInterface<JobTitle> {
 
 	@Override
 	public boolean create(JobTitle jobTitle) {
-		return jdbcTemplate.update(SQL_INSERT_JOBTITLE, jobTitle.getJobTitle()) > 0;
+		String queryString = SQL_INSERT_JOBTITLE;
+		
+		
+		return false;
+		
 	}
 
 }

@@ -36,13 +36,13 @@ public class EmployeeServiceImplement implements ServiceInterface<Employee> {
 
 	@Override
 	public boolean create(Employee employee) {
-		// Employee employeeDetail = getInfoByEmail(employee.getEmailId());
-		// System.out.println(employeeDetail.getEmailId());
-		// if
-		// (employeeDetail.getEmailId().equalsIgnoreCase(employee.getEmailId()))
-		// {
-		// return false;
-		// }
+		 Employee employeeDetail = getInfoByEmail(employee.getEmailId());
+		 System.out.println(employeeDetail.getEmailId());
+		 if
+		 (employeeDetail.getEmailId().equalsIgnoreCase(employee.getEmailId()))
+		 {
+		 return false;
+		 }
 		return employeeDAO.create(employee);
 	}
 

@@ -116,7 +116,6 @@ public class AdminController {
 		}
 		model.addAttribute("error", "error");
 		return "admin/addEmployee";
-
 	}
 
 	/**

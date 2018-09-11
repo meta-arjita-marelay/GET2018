@@ -47,7 +47,7 @@ public class EmployeeDAO implements DAOInterface<Employee> {
 	private final String SQL_UPDATE_EMPLOYEE = "UPDATE employee SET first_name = ? , middle_name = ? , last_name = ? , dob = ? , gender = ?,"
 			+ " email = ? , contact = ? , skype_id = ? , profile_picture = ? WHERE code = ?";
 
-	private final String SQL_Disable_Employee = "UPDATE employee SET enabled = 'false'  WHERE code = ?";
+	private final String SQL_DISABLE_EMPLOYEE = "UPDATE employee SET enabled = 'false'  WHERE code = ?";
 
 	private final String SQL_UPDATE_PASSWORD = "UPDATE employee SET password = ? WHERE email = ? AND password = ? ";
 
