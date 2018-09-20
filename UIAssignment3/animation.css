@@ -1,0 +1,57 @@
+@keyframes firstAnimation{
+    25%{transform: translate(0px, 100px);}
+    50%{transform: translate(100px, 100px);}
+    75%{transform: translate(100px, 0px);}
+    100%{transform: translate(0px, 0px);}
+}
+@keyframes secondAnimation{
+    25%{transform: translate(-100px, 0px);}
+    50%{transform: translate(-100px, 100px);}
+    75%{transform: translate(0px, 100px);}
+    100%{transform: translate(0px, 0px);}
+}
+@keyframes thirdAnimation{
+    25%{transform: translate(100px, 0px);}
+    50%{transform: translate(100px, -100px);}
+    75%{transform: translate(0px, -100px);}
+    100%{transform: translate(0px, 0px);}
+}
+@keyframes fourthAnimation{
+    25%{transform: translate(0px, -100px);}
+    50%{transform: translate(-100px, -100px);}
+    75%{transform: translate(-100px, 0px);}
+    100%{transform: translate(0px, 0px);}
+}
+
+#parentContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+}
+.block{
+    width: 100px;
+    height: 100px;
+}
+#firstQuadrant{
+    background-color: #7a45e5;
+    animation: firstAnimation 1.5s infinite;
+}
+#secondQuadrant{
+    background-color: #fa5667;
+    animation: secondAnimation 1.5s infinite;
+}
+#thirdQuadrant{
+    background-color: #fac24c;
+    animation: thirdAnimation 1.5s infinite;
+}
+#fourthQuadrant{
+    background-color: #1b91f7;
+    animation: fourthAnimation 1.5s infinite;
+}
