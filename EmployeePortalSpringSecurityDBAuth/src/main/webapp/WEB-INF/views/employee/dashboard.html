@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Employee Dashboard</title>
+</head>
+<body>
+	<h1>Dashboard</h1>
+	<a th:href="@{'../admin/searchEmployee?role=2'}">Search Employee</a>
+	</br>
+	<a th:href="@{'resetPassword?email='}+${email}">Reset Password</a>
+	</br>
+	<a th:href="@{'showProfile?email='}+${email}">Show Profile</a>
+	</br>
+	<form th:action="@{/Logout}" method="post">
+		<input type="submit" name="login-submit" id="login-submit" value="LogOut" />
+	</form>
+	
+	</br>
+</body>
+</html>
