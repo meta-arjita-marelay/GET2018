@@ -217,6 +217,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+    padding: 2px;
 }
 .alignleft{
 	width: 50%;
@@ -230,11 +231,13 @@
 	width: 100%;
 	font: bold 15px cursive;
 	color: black;
+    padding: 2px;
 }
 .reviewby{
 	width: 100%;
 	font: bold 10px cursive;
 	color: black;
+    padding: 
 }
 #downloadappcontainer{
 	background-color: rgba(99, 136, 251, 0.75);
