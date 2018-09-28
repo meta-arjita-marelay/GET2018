@@ -1,311 +1,358 @@
-*{
-    margin: 0px;
+* {
+	margin: 0px;
+	box-sizing: border-box;
 }
-#firstpart{
-    background-image: url("Images/homebg.png");
-    background-size: 100% 100%;
+
+.layer {
+	display: flex;
 }
-#header{
-    display: flex;
-    padding: 2%;
-    margin: 0% 10%;
+
+body {
+	background-image: url("Images/bodybg.png");
+	background-size: 100% 100%:
 }
-.headerItems{
-	float:left;
-    width: 30%;
-    margin: 2%;
+
+#introduction {
+	background-image: url("Images/homebg.png");
+	background-size: 100% 100%;
 }
-#headerlink{
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   justify-content: space-between;
+
+#header {
+	align-content: center;
+	background-color: rgba(99, 136, 251);
+	width: 100%;
+	padding: 10px 50px;
 }
-#headerlink > a{
+
+.headerItems {
+	width: 30%;
+	margin: 10px 30px;
+	box-sizing: border-box;
+}
+
+#header-logo {
+	align-content: center;
+}
+
+#header-link {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#header-link>a {
 	color: white;
 	text-decoration: none;
 	font: bold 15px cursive;
 }
-#socialsiteicon{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: flex-end; 
-}
-#socialsiteicon img{
-    padding: 2%;
-    width: 10%;
-    height: 10%;
-}
-#cover{
+
+#social-site-icon {
 	display: flex;
-    padding: 2%;
-    margin: 0% 10%;
+	justify-content: center;
 }
-#coverdetails{
-	float:left;
-    width: 50%;
-    margin: 2%;
-    color: white;
+
+#social-site-icon>i {
+	padding: 0px 10px;
+	width: 10%;
+	height: 10%;
 }
-#coverdetails > p{
-	padding: 3%;
+
+#introduction {
+	padding: 50px;
+}
+
+#introduction-details {
+	width: 50%;
+	margin: 10px;
+	color: white;
+}
+
+#introduction-details>p {
+	padding: 15px;
 	font: bold 50px cursive;
 }
-.coverlink{
+
+.coverLink {
 	margin: 3%;
 	color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 3px;
-    font: bold 15px cursive;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 3px;
+	font: bold 15px cursive;
 }
-#downloadlink{
+
+#download-link {
 	background-color: rgba(252, 106, 69);
 }
-#featureslink{
+
+#featureslink {
 	background-color: rgba(69, 99, 197);
 }
-#coverimage{
-	display: flex;
-	justify-content: flex-end;
+
+#introduction-image {
 	width: 50%;
-    margin: 2%;
+	padding: 50px;
 }
-#coverimage > img{
+
+#introduction-image>img {
 	width: 90%;
 	height: 90%;
 }
-#secondpart{
-    background-image: url("Images/bodybg.png");
-    background-size: 100% 100%;
+
+#secondpart {
+	background-image: url("Images/bodybg.png");
+	background-size: 100% 100%;
 }
-#features{
-	display: flex;
-	padding: 2%;
-    margin: 0% 10%;
-    flex-wrap: wrap;
+
+#features {
+	padding: 10px;
+	flex-wrap: wrap;
 }
-#featureheader{
-	flex-wrap: wrap; 
+
+#feature-header {
+	flex-wrap: wrap;
 	width: 100%;
 	text-align: center;
 	padding: 3%;
 }
-#featureheader > h1{
+
+#feature-header>h1 {
+	width: 100%;
 	font: bold 35px cursive;
 	color: rgba(114, 139, 251);
 }
-#featureheader > p{
+
+#feature-header>p {
+	width: 100%;
 	color: rgba(195, 200, 203);
 	font: 20px cursive;
 }
-#featuredetail{
-	display: flex;
+
+#feature-detail {
 	flex-wrap: nowrap;
-	padding: 3%;
+	padding: 0% 5%;
 }
-.featuredetailcontainer{
-	display: flex;
-	flex-wrap: nowrap;
+
+.featureDetailContainer {
+	flex-wrap: wrap;
 }
-.featuredetailcontainer > img{
-	display: flex;
-	flex-wrap: start;
-	padding: 2%;
-	width: 25%;
-	height: 50%;
+
+.featureDetailContainer>img {
+	display: inline;
+	padding: 0px 10px;
 }
-.featurecontent > h2{
+
+.featureContent {
+	width: 75%;
+}
+
+.featureContent>h2 {
 	font: bold 25px cursive;
 	color: black;
 }
-.featurecontent > p{
+
+.featureContent>p {
 	font: 15px cursive;
 	color: rgba(196, 202, 209);
 }
-#featuresimage{
-	padding: 3%;
-	display: flex;
+
+#features-image {
 	flex-wrap: nowrap;
 	justify-content: center;
 	width: 100%;
 }
-#featuresimage > img{
-	width: 80%;
+
+#features-image>img {
+	padding: 50px;
+	width: 100%;
 	height: 100%;
 }
-#screenshotcontainer{
-	display: flex;
-	padding: 2%;
-    margin: 0% 10%;
-    flex-wrap: wrap;
+
+#screenshot-container {
+	padding: 10px;
+	margin: 0% 10%;
+	flex-wrap: wrap;
 }
-#screenshotheader{
-	flex-wrap: wrap; 
+
+#screenshot-header {
+	flex-wrap: wrap;
 	width: 100%;
 	text-align: center;
-	padding: 3%;
+	padding: 5%;
 }
-#screenshotheader > h1{
+
+#screenshot-header>h1 {
 	font: bold 35px cursive;
 	color: rgba(114, 139, 251);
 }
-#screenshotheader > p{
+
+#screenshot-header>p {
 	color: rgba(195, 200, 203);
 	font: 15px cursive;
 }
-.screenshots{
-	display: flex;
+
+.screenShots {
 	flex-wrap: wrap;
 	width: 100%;
-	margin: 0% 5% 0% 2%; 
+	margin: 0% 5% 0% 2%;
 }
-.screenshotimage{
-	width: 35%;
-	padding: 2%;
-	margin: 0% 5% 0% 0%;
-}
-.screenshotdetail{
-	width: 55%;
-	height: 50%;
-	display: flex;
-	flex-wrap: wrap;
-}
-.screenshotlogo{
-	width: 100%;
-	height: 25%;
-	padding: 25% 0%;
+
+.screenshotImage {
+	width: 45%;
+	padding: 50px;
+	margin: 0px 20px;
 	box-sizing: border-box;
 }
-.screenshotdetail > img{
+
+.screenshotDetail {
+	width: 50%;
+	height: 50%;
+	flex-wrap: wrap;
+	padding: 70px;
+}
+
+.screenshotLogo {
+	width: 100%;
+	height: 25%;
+	padding: 80px 0px;
+	box-sizing: border-box;
+}
+
+.screenshotDetail>img {
 	width: 40%;
 }
-.screenshotdetail > h2{
+
+.screenshotDetail>h2 {
+	padding: 10px 0px;
 	width: 100%;
 	font: bold 25px cursive;
 	color: black;
 }
-.screenshotdetail > p{
+
+.screenshotDetail>p {
 	width: 100%;
 	font: 15px cursive;
 	color: rgba(196, 202, 209);
 }
-#reviews{
-	display: flex;
+
+#reviews {
 	padding: 2%;
-    margin: 0% 10%;
-    flex-wrap: wrap;
+	margin: 0% 10%;
+	flex-wrap: wrap;
 }
-#reviewheader{
-	flex-wrap: wrap; 
+
+#review-header {
+	flex-wrap: wrap;
 	width: 100%;
 	text-align: center;
 	padding: 3%;
 }
-#reviewheader > h1{
+
+#review-header>h1 {
 	font: bold 35px cursive;
 	color: rgba(114, 139, 251);
 }
-#reviewheader > p{
+
+#review-header>p {
 	color: rgba(195, 200, 203);
 	font: 20px cursive;
 }
-.reviewdetailcontainer{
+
+.reviewDetailContainer {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-    padding: 2px;
+	padding: 20px;
 }
-.alignleft{
-	width: 50%;
-	float: left;
-}
-.alignright{
-	width: 50%;
-	float: right;
-}
-.reviewtext{
+
+.reviewText {
 	width: 100%;
 	font: bold 15px cursive;
 	color: black;
-    padding: 2px;
+	padding: 2px;
 }
-.reviewby{
+
+.reviewBy {
 	width: 100%;
 	font: bold 10px cursive;
 	color: black;
-    padding: 
+	padding:
 }
-#downloadappcontainer{
+
+#download-app-container {
 	background-color: rgba(99, 136, 251, 0.75);
 }
-#downloadapp{
-	display: flex;
-    padding: 2% 2% 0% 2%;
-    margin: 0% 10%;
+
+#download-app {
+	padding: 10px 100px;
+	margin: 0px 50px;
 }
-#downloadleft{
-	float:left;
-    width: 50%;
-    margin: 2%;
-    color: white;
+
+#download-details {
+	width: 50%;
+	margin: 10px;
+	color: white;
 }
-#downloadleft > h1{
-	padding: 2%;
+
+#download-details>h1 {
+	padding: 10px;
 	font: bold 30px cursive;
 }
-#downloadleft > p{
-	padding: 2%;
+
+#download-details>p {
+	padding: 10px;
 	font: bold 20px cursive;
 }
-#downloadleft > img{
+
+#download-details>img {
 	width: 30%;
 	height: 20%;
-	margin: 2%;
+	margin: 10px;
 }
-#downloadright{
-	display: flex;
+
+#download-image {
 	justify-content: flex-end;
 	width: 50%;
-    margin: 2% 2% 0% 2%;
+	margin: 10px;
 }
-#downloadright > img{
+
+#download-image>img {
 	width: 90%;
 	height: 100%;
 }
-#footercontainer{
+
+#footer-container {
 	background-color: rgba(56, 58, 83);
 }
-#footer{
-	display: flex;
-    padding: 2%;
-    margin: 0% 10%;
+
+#footer {
+	padding: 10px;
+	margin: 0px 50px;
 }
-.footeritems{
-	float:left;
-    width: 30%;
-    margin: 2%;
+
+.footerItems {
+	width: 30%;
+	margin: 10px;
 }
-#footerlink{
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   justify-content: space-between;
+
+#footer-link {
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
 }
-#footerlink > a{
+
+#footer-link>a {
 	color: rgba(159, 152, 169);
 	text-decoration: none;
 	font: bold 15px cursive;
 }
-hr{
+
+hr {
 	border-style: solid;
 	border-color: rgba(159, 152, 169);
 }
-#footercopyright > p{
+
+#rights>p {
 	color: rgba(159, 152, 169);
 	text-align: center;
-	padding: 3%;
+	padding: 10px;
 }
