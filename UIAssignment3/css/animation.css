@@ -1,0 +1,51 @@
+@keyframes firstAnimation{
+    
+    0%{
+        transform: translate(0%, 0%)
+    }
+    25%{
+        transform: translate(0%, 100%)
+    }
+    50%{
+        transform: translate(100%, 100%)
+    }
+    75%{
+        transform: translate(100%, 0%)
+    }
+}
+
+#parentContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+.block{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    animation-name: firstAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#parentContainer :nth-child(1){
+    background-color: #7a45e5;
+    animation-delay: 0s;
+}
+#parentContainer :nth-child(2){
+    background-color: #fa5667;
+    animation-delay: -0.5s;
+}
+#parentContainer :nth-child(3){
+    background-color: #fac24c;
+    animation-delay: -1s;
+}
+#parentContainer :nth-child(4){
+    background-color: #1b91f7;
+    animation-delay: -1.5s;
+}
