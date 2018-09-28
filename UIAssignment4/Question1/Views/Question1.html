@@ -1,0 +1,159 @@
+<! DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            FORM THROUGH HTML5
+        </title>
+        <link href="../CSS/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                Contact Us Today!
+            </div>
+            <div id="form">
+                <form action="#">
+                    <div class="row">
+                        <div class="field-name">First Name</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="First Name" pattern="[A-Za-z]{2,}" autofocus required oninvalid="this.setCustomValidity('Enter valid first name')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">Last Name</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">E-mail</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="email" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your valid email-id')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">Phone #</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="tel" placeholder="(845)555-1212" required oninvalid="this.setCustomValidity('Enter valid phone number')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">Address</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="Address" required oninvalid="this.setCustomValidity('Enter valid address')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">City</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="City" pattern="[A-Za-z]{2,}" required oninvalid="this.setCustomValidity('Enter valid city name')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">State</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-list-ul"></i>
+                            </div>
+                            <div class="input-field">
+                                <select>
+                                    <option disabled selected>Select your state</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Goa</option>
+                                    <option>Rajasthan</option>
+                                    <option>Uttar Pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">Zip Code</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="Zip Code">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">Website or domain name</div>
+                        <div class="input-container">
+                            <div class="field-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="Website or domain name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name" id="hosting-field">
+                            Do you have hosting?
+                        </div>
+                        <div class="input-container">
+                            <div class="input-field" id="radio-input">
+                                <label>
+                                    <input type="radio" name="hosting">Yes
+                                </label>
+                                <label>
+                                    <input type="radio" name="hosting">No
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field-name">Project Description</div>
+                        <div class="input-container">
+                            <div class="field-icon" id="textarea-icon">
+                                <i class="fas fa-pen"></i>
+                            </div>
+                            <div class="input-field">
+                                <textarea placeholder="Project Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <button class="btn">Send <i id="btn" class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
