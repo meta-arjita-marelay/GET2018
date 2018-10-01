@@ -54,7 +54,7 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="input-field">
-                                <input type="tel" placeholder="(845)555-1212" required oninvalid="this.setCustomValidity('Enter valid phone number')">
+                                <input type="text" placeholder="(845)555-1212" pattern="[0-9]{10}" required oninvalid="this.setCustomValidity('Enter valid phone number')">
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 <i class="fas fa-home"></i>
                             </div>
                             <div class="input-field">
-                                <input type="text" placeholder="Zip Code">
+                                <input type="text" placeholder="Zip Code" pattern="[0-9]{6}">
                             </div>
                         </div>
                     </div>
