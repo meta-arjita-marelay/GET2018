@@ -46,45 +46,6 @@ public class AdminController {
 	public String dashboard() {
 		return "admin/dashboard";
 	}
-
-	/**
-	 * method to move to login page
-	 * 
-	 * @return destination path
-	 */
-	/*@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login() {
-		return "admin/login";
-	}
-*/
-	/**
-	 * Function to validate email and paassword of admin and redirect to
-	 * dashboard page
-	 * 
-	 * @param email
-	 *            email entered by user
-	 * @param password
-	 *            password entered by user
-	 * @param model
-	 *            will be used in error message
-	 * @return destination path
-	 *//*
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(@RequestParam("email") String email,
-			@RequestParam("password") String password, Model model) {
-		if (email.equalsIgnoreCase("arjita@gmail.com")
-				&& password.equals("123456")) {
-			return "admin/dashboard";
-		}
-		model.addAttribute("error", "error");
-		return "admin/login";
-	}
-*/
-	
-//	@RequestMapping(value = "/security", method = RequestMethod.GET)
-//	public String loginSecurity() {
-//		return "admin/dashboard";
-//	}
 	
 	/**
 	 * Function to redirect to Add Employee page

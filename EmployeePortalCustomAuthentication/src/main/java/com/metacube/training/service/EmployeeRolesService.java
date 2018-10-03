@@ -18,5 +18,4 @@ public class EmployeeRolesService {
 	public List<EmployeeRole> getInfoByEmail(String email) {
 		return empRolesRepo.findByEmail(email);
 	}
-
 }

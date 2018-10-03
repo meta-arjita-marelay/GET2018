@@ -109,32 +109,6 @@ public class MvcWebConfig implements WebMvcConfigurer {
 		return transactionManager;
 	}
 
-	/*
-	 * @Bean public LocalSessionFactoryBean getSessionFactory() {
-	 * LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-	 * factoryBean.setDataSource(dataSource());
-	 * 
-	 * Properties props = new Properties();
-	 * 
-	 * // Setting Hibernate properties props.put("hibernate.show_sql",
-	 * env.getProperty("hibernate.show_sql"));
-	 * props.put("hibernate.hbm2ddl.auto",
-	 * env.getProperty("hibernate.hbm2ddl.auto"));
-	 * 
-	 * factoryBean.setHibernateProperties(props);
-	 * factoryBean.setAnnotatedClasses(Project.class);
-	 * 
-	 * return factoryBean; }
-	 */
-
-	/*
-	 * @Bean public HibernateTransactionManager getTransactionManager() {
-	 * HibernateTransactionManager transactionManager = new
-	 * HibernateTransactionManager();
-	 * transactionManager.setSessionFactory(getSessionFactory().getObject());
-	 * return transactionManager; }
-	 */
-
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();

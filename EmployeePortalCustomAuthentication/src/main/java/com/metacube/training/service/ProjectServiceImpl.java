@@ -30,20 +30,31 @@ public class ProjectServiceImpl implements ProjectService {
 
 	@Override
 	public boolean deleteProject(int id) {
-		projectRepository.delete((long) id);
-		return false;
+		try {
+			projectRepository.delete((long) id);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean updateProject(Project project) {
-		projectRepository.save(project);
-		return true;
+		try {
+			projectRepository.save(project);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean createProject(Project project) {
-		projectRepository.save(project);
-		return true;
+		try {
+			projectRepository.save(project);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
-
 }

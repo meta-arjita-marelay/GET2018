@@ -28,30 +28,6 @@ public class EmployeeController {
 	public String dashboard(@ModelAttribute("email") String email) {
 		return "employee/dashboard";
 	}
-	/**
-	 * method for validating login by email
-	 * 
-	 * @param email
-	 *            entered by user
-	 * @param password
-	 *            entered by user
-	 * @param model
-	 * @return destination path
-	 *//*
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(@RequestParam(name = "email") String email,
-			@RequestParam(name = "password") String password, Model model) {
-		String view;
-		if (((EmployeeServiceImplement) employeeService).validateLogin(email,
-				password)) {
-			view = "employee/dashboard";
-			model.addAttribute("email", email);
-		} else {
-			view = "employee/login";
-			model.addAttribute("error", "error");
-		}
-		return view;
-	}*/
 
 	/**
 	 * method for redirecting dashboard to show profile page

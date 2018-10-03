@@ -2,8 +2,6 @@ package com.metacube.training.service;
 
 import java.util.List;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -29,45 +27,46 @@ public class EmployeeServiceImplement implements ServiceInterface<Employee> {
 
 	@Override
 	public boolean deleteInfo(int id) {
-		 empRepo.delete((long) id);
-		 return true;
+		try {
+			empRepo.delete((long) id);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean updateInfo(Employee employee) {
-		empRepo.save(employee);
-		return true;
-//		return employeeDAO.updateInfo(employee);
+		try {
+			empRepo.save(employee);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean create(Employee employee) {
-		empRepo.save(employee);
-		return true;
-//		return employeeDAO.create(employee);
+		try {
+			empRepo.save(employee);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	public Employee getInfoByEmail(String email) {
-		try{
+		try {
 			return empRepo.findByEmailId(email);
-		}catch(EmptyResultDataAccessException e){
+		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}
-//		return ((EmployeeDAO) employeeDAO).getInfoByEmail(email);
 	}
 
 	public List<Employee> searchBy(String filter, String attributeName) {
 		if (filter.equals("name")) {
 			return empRepo.findByFirstName(attributeName);
-		} 
-//		else if (filter.equals("project")) {
-//			return ((EmployeeDAO) employeeDAO).getInfoByProject(attributeName);
-//		} else if (filter.equals("skills")) {
-//			return ((EmployeeDAO) employeeDAO).getInfoBySkills(attributeName);
-//		} else {
-//			return ((EmployeeDAO) employeeDAO)
-//					.getInfoByExperience(attributeName);
-//		}
+		}
 		return null;
 	}
 
@@ -82,9 +81,6 @@ public class EmployeeServiceImplement implements ServiceInterface<Employee> {
 
 	public Boolean resetPassword(String email, String oldPassword,
 			String newPassword) {
-			return true;
-//		return ((EmployeeDAO) employeeDAO).resetPassword(email, oldPassword,
-//				newPassword);
-
+		return true;
 	}
 }

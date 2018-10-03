@@ -29,8 +29,12 @@ public class SkillServiceImplement implements ServiceInterface<SkillsMaster> {
 
 	@Override
 	public boolean updateInfo(SkillsMaster skill) {
-		skillRepo.save(skill);
-		return false;
+		try {
+			skillRepo.save(skill);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
