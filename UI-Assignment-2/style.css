@@ -1,0 +1,358 @@
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.layer {
+	display: flex;
+}
+
+body {
+	background-image: url("Images/bodybg.png");
+	background-size: 100% 100%:
+}
+
+#introduction {
+	background-image: url("Images/homebg.png");
+	background-size: 100% 100%;
+}
+
+#header {
+	align-content: center;
+	background-color: rgba(99, 136, 251);
+	width: 100%;
+	padding: 10px 50px;
+}
+
+.headerItems {
+	width: 30%;
+	margin: 10px 30px;
+	box-sizing: border-box;
+}
+
+#header-logo {
+	align-content: center;
+}
+
+#header-link {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#header-link>a {
+	color: white;
+	text-decoration: none;
+	font: bold 15px cursive;
+}
+
+#social-site-icon {
+	display: flex;
+	justify-content: center;
+}
+
+#social-site-icon>i {
+	padding: 0px 10px;
+	width: 10%;
+	height: 10%;
+}
+
+#introduction {
+	padding: 50px;
+}
+
+#introduction-details {
+	width: 50%;
+	margin: 10px;
+	color: white;
+}
+
+#introduction-details>p {
+	padding: 15px;
+	font: bold 50px cursive;
+}
+
+.coverLink {
+	margin: 3%;
+	color: white;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 3px;
+	font: bold 15px cursive;
+}
+
+#download-link {
+	background-color: rgba(252, 106, 69);
+}
+
+#featureslink {
+	background-color: rgba(69, 99, 197);
+}
+
+#introduction-image {
+	width: 50%;
+	padding: 50px;
+}
+
+#introduction-image>img {
+	width: 90%;
+	height: 90%;
+}
+
+#secondpart {
+	background-image: url("Images/bodybg.png");
+	background-size: 100% 100%;
+}
+
+#features {
+	padding: 10px;
+	flex-wrap: wrap;
+}
+
+#feature-header {
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	padding: 3%;
+}
+
+#feature-header>h1 {
+	width: 100%;
+	font: bold 35px cursive;
+	color: rgba(114, 139, 251);
+}
+
+#feature-header>p {
+	width: 100%;
+	color: rgba(195, 200, 203);
+	font: 20px cursive;
+}
+
+#feature-detail {
+	flex-wrap: nowrap;
+	padding: 0% 5%;
+}
+
+.featureDetailContainer {
+	flex-wrap: wrap;
+}
+
+.featureDetailContainer>img {
+	display: inline;
+	padding: 0px 10px;
+}
+
+.featureContent {
+	width: 75%;
+}
+
+.featureContent>h2 {
+	font: bold 25px cursive;
+	color: black;
+}
+
+.featureContent>p {
+	font: 15px cursive;
+	color: rgba(196, 202, 209);
+}
+
+#features-image {
+	flex-wrap: nowrap;
+	justify-content: center;
+	width: 100%;
+}
+
+#features-image>img {
+	padding: 50px;
+	width: 100%;
+	height: 100%;
+}
+
+#screenshot-container {
+	padding: 10px;
+	margin: 0% 10%;
+	flex-wrap: wrap;
+}
+
+#screenshot-header {
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	padding: 5%;
+}
+
+#screenshot-header>h1 {
+	font: bold 35px cursive;
+	color: rgba(114, 139, 251);
+}
+
+#screenshot-header>p {
+	color: rgba(195, 200, 203);
+	font: 15px cursive;
+}
+
+.screenShots {
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0% 5% 0% 2%;
+}
+
+.screenshotImage {
+	width: 45%;
+	padding: 50px;
+	margin: 0px 20px;
+	box-sizing: border-box;
+}
+
+.screenshotDetail {
+	width: 50%;
+	height: 50%;
+	flex-wrap: wrap;
+	padding: 70px;
+}
+
+.screenshotLogo {
+	width: 100%;
+	height: 25%;
+	padding: 80px 0px;
+	box-sizing: border-box;
+}
+
+.screenshotDetail>img {
+	width: 40%;
+}
+
+.screenshotDetail>h2 {
+	padding: 10px 0px;
+	width: 100%;
+	font: bold 25px cursive;
+	color: black;
+}
+
+.screenshotDetail>p {
+	width: 100%;
+	font: 15px cursive;
+	color: rgba(196, 202, 209);
+}
+
+#reviews {
+	padding: 2%;
+	margin: 0% 10%;
+	flex-wrap: wrap;
+}
+
+#review-header {
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	padding: 3%;
+}
+
+#review-header>h1 {
+	font: bold 35px cursive;
+	color: rgba(114, 139, 251);
+}
+
+#review-header>p {
+	color: rgba(195, 200, 203);
+	font: 20px cursive;
+}
+
+.reviewDetailContainer {
+	width: 100%;
+	padding: 20px;
+}
+
+.reviewText {
+	width: 100%;
+	font: bold 15px cursive;
+	color: black;
+	padding: 2px;
+}
+
+.reviewBy {
+	width: 100%;
+	font: bold 10px cursive;
+	color: black;
+	padding:
+}
+
+#download-app-container {
+	background-color: rgba(99, 136, 251, 0.75);
+}
+
+#download-app {
+	padding: 10px 100px;
+	margin: 0px 50px;
+}
+
+#download-details {
+	width: 50%;
+	margin: 10px;
+	color: white;
+}
+
+#download-details>h1 {
+	padding: 10px;
+	font: bold 30px cursive;
+}
+
+#download-details>p {
+	padding: 10px;
+	font: bold 20px cursive;
+}
+
+#download-details>img {
+	width: 30%;
+	height: 20%;
+	margin: 10px;
+}
+
+#download-image {
+	justify-content: flex-end;
+	width: 50%;
+	margin: 10px;
+}
+
+#download-image>img {
+	width: 90%;
+	height: 100%;
+}
+
+#footer-container {
+	background-color: rgba(56, 58, 83);
+}
+
+#footer {
+	padding: 10px;
+	margin: 0px 50px;
+}
+
+.footerItems {
+	width: 30%;
+	margin: 10px;
+}
+
+#footer-link {
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#footer-link>a {
+	color: rgba(159, 152, 169);
+	text-decoration: none;
+	font: bold 15px cursive;
+}
+
+hr {
+	border-style: solid;
+	border-color: rgba(159, 152, 169);
+}
+
+#rights>p {
+	color: rgba(159, 152, 169);
+	text-align: center;
+	padding: 10px;
+}
