@@ -1,0 +1,94 @@
+*{
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#container{
+    margin: 10px;
+    padding: 10px;
+    background-color: #eeeeee;
+}
+#header{
+    font: bold 30px sans-serif;
+}
+.form{
+    width: 60%;
+}
+.row{
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.field-name{
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px 50px;
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.field-icon{
+    padding: 6px;
+    width: 10%;
+    font-size: 25px;
+    border: 1px solid #a1a1a1;
+}
+.input-field{
+    width: 90%;
+    border: 1px solid #a1a1a1;
+}
+#hosting-field{
+    padding: 0px 50px 10px ;
+}
+#radio-input{
+    width: 100%;
+    padding: 0px;
+    border-width: 0px;
+}
+input, select, textarea{
+    padding: 10px;
+    width: 100%;
+}
+input[type="radio"]{
+    padding: 0px;
+    width: 10%;
+}
+label{
+    text-align: left;
+    display: block;
+}
+.btn {
+   background-color: #f29c42;
+   border: none;
+   color: white;
+   padding: 10px;
+   text-align: center;
+   text-decoration: none;
+   display: flex;
+   font-size: 15px;
+   margin-bottom: auto;
+   cursor: pointer;
+}
+#btn{
+    padding: 0px 5px;
+}
+#textarea-icon{
+    padding: 13.5px;
+}
+input:invalid{
+    border:1px solid  red;
+}
+.parent-container{
+	width: 80%;
+	display: flex;
+	text-align: center;
+	flex-wrap: nowrap;
+}
+#detail-container{
+	margin : 0px;
+}

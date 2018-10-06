@@ -1,0 +1,114 @@
+<! DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        FORM THROUGH HTML5
+    </title>
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="Scripts/AddOptionalElement.js"></script>
+    <script src="Scripts/Validation.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            Contact Us Today!
+        </div>
+
+        <form action="details.html">
+            <div class="form" id="form-container" method="post" onsubmit="return submitForm();">
+                <div class="row">
+                    <div class="field-name">First Name</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="First Name" id="first-name" autofocus>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field-name">Last Name</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="last-name" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field-name">E-mail</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="email" placeholder="E-mail">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field-name">Phone #</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="phone" placeholder="(845)555-1212">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field-name">Address</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="address" placeholder="Address">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field-name">City</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="city" placeholder="City">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field-name">State</div>
+                    <div class="input-container">
+                        <div class="field-icon">
+                            <i class="fas fa-list-ul"></i>
+                        </div>
+                        <div class="input-field">
+                            <select name="State" id="State" onchange="furtherOptions.call(this, event)">
+                                <option value="n/a" disabled selected>Please select your state</option>
+                                <option value="Rajasthan">Rajasthan </option>
+                                <option value="Haryana">Haryana </option>
+                                <option value="Maharastra">Maharastra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <button class="btn" type="submit" onclick="return submitForm();">Send <i id="btn" class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
