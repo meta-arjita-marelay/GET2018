@@ -4,15 +4,16 @@ function firstNameValidate() {
     var inputValue = document.getElementById("first-name").value;
     var regexpression = new RegExp("^([a-zA-Z]{2,})$");
     if(inputValue==""){
-        error.set("First Name", "First Name is required");
         document.getElementById("first-name").style.border="solid thin red";
+        error.set("First Name", "First Name is required.");
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("first-name").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("first-name").style.border="solid thin red";
-        error.set("First Name", "First Name is invalid");
+        error.set("First Name", "First Name is invalid. First Name length should be minimum 2 alphabets.");
         return false;
     }
 }
@@ -22,14 +23,15 @@ function lastNameValidate() {
     var regexpression = new RegExp("^([a-zA-Z]{2,})$");
     if(inputValue==""){
         document.getElementById("last-name").style.border="solid thin red";
-        error.set("Last Name", "Last Name is required");
+        error.set("Last Name", "Last Name is required. ");
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("last-name").style.border="solid thin blue";
         return true;
     } else{
         document.getElementById("last-name").style.border="solid thin red";
-        error.set("Last Name", "Last Name is invalid");
+        error.set("Last Name", "Last Name is invalid. Last Name length should be minimum 2 alphabets.");
         return false;
     }
 }
@@ -43,6 +45,7 @@ function emailValidate() {
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("email").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("email").style.border="solid thin red";
@@ -60,10 +63,11 @@ function phoneValidate() {
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("phone").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("phone").style.border="solid thin red";
-        error.set("Phone", "Phone number is invalid");
+        error.set("Phone", "Phone number is invalid. Phone number length should be of 10-12 digits.");
         return false;
     }
 }
@@ -76,6 +80,7 @@ function addressValidate(){
         return false;
     }
     else{
+        document.getElementById("address").style.border="solid thin blue";
         return true;
     }
 }
@@ -89,10 +94,11 @@ function cityValidate() {
         return true;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("city").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("city").style.border="solid thin red";
-        error.set("City", "City Name is invalid");
+        error.set("City", "City Name is invalid. City name should be of minimum 2 alphabets.");
         return false;
     }
 }
@@ -106,10 +112,11 @@ function websiteValidate() {
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("website").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("website").style.border="solid thin red";
-        error.set("Website", "Website is invalid");
+        error.set("Website", "Website is invalid. Website name should be of minimum 2 alphabets");
         return false;
     }
 }
@@ -123,27 +130,29 @@ function projectValidate() {
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("project").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("project").style.border="solid thin red";
-        error.set("Project", "Project name is invalid");
+        error.set("Project", "Project description is invalid. Project description should be of minimum 2 alphabets");
         return false;
     }
 }
 
 function zipCodeValidate() {
     var inputValue = document.getElementById("zip-code").value;
-    var regexpression = new RegExp("^([0-9]{2,})$");
+    var regexpression = new RegExp("^([0-9]{6})$");
     if(inputValue==""){
         document.getElementById("zip-code").style.border="solid thin red";
         error.set("Zip Code", "Zip Code is required");
         return false;
     }
     else if (regexpression.test(inputValue)) {
+        document.getElementById("zip-code").style.border="solid thin blue";
         return true;
     } else {
         document.getElementById("zip-code").style.border="solid thin red";
-        error.set("Zip Code", "Zip Code is invalid");
+        error.set("Zip Code", "Zip Code is invalid. Zip Code should be of 6 digits.");
         return false;
     }
 }
@@ -155,6 +164,7 @@ function stateValidate() {
         error.set("State", "State Name is required");
         return false;
     } else {
+        document.getElementById("State").style.border="solid thin blue";
         return true;
     }
 }
