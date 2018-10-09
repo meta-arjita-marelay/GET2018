@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            Images using Canvas
+        </title>
+        
+        <style>
+            ul {
+                list-style: none;
+            }
+            
+            li {
+                display: block;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        
+        <script>
+            function draw() {
+                var image1 = document.getElementById("image1");
+                var ctx1 = image1.getContext("2d");
+                ctx1.beginPath();
+                ctx1.arc(image1.width/2, image1.height/2, 40, 0, 2 * Math.PI);
+                ctx1.fillStyle = "#2F93D1";
+                ctx1.fill();    
+                
+                var image2 = document.getElementById('image2');
+                var ctx2 = image2.getContext('2d');
+                ctx2.beginPath();
+                ctx2.arc(image2.width/2, image2.height/2, 40, Math.PI/2, (3 * Math.PI/2), false);
+                ctx2.closePath();
+                ctx2.lineWidth = 5;
+                ctx2.fillStyle = '#2F93D1';
+                ctx2.fill();
+                ctx2.beginPath();
+                ctx2.arc(image2.width/2, image2.height/2, 38, Math.PI/2, (3 * Math.PI/2), true);
+                ctx2.strokeStyle = "#989A99";
+                ctx2.stroke();
+                
+                var image3 = document.getElementById("image3");
+                var ctx3 = image3.getContext("2d");
+                ctx3.beginPath();
+                ctx3.arc(image3.width/2, image3.height/2, 35, 0, 2 * Math.PI);
+                ctx3.strokeStyle = "#99215F";
+                ctx3.lineWidth = 10;
+                ctx3.stroke();
+                
+                var canvas4 = document.getElementById("image4");
+                var context4 = canvas4.getContext("2d");
+                context4.beginPath();
+                context4.arc(image1.width/2, image1.height/2, 40, 0, 2 * Math.PI);
+                context4.fillStyle = "#F6B659";
+                context4.fill();
+                context4.fillStyle = "white";
+                context4.fillRect((canvas4.width/2 - 3), (canvas4.height/2 - 35), 6, 70);
+                context4.fillRect((canvas4.width/2 - 35), (canvas4.height/2 - 3), 70, 6);
+                
+                var image5 = document.getElementById("image5");
+                var ctx5 = image5.getContext('2d');
+                ctx5.moveTo(image5.width/2, (image5.height/2 - 40));
+                ctx5.lineTo((image5.width/2 - 40), (image5.height/2 + 40));
+                ctx5.lineTo((image5.width/2 + 40), (image5.height/2 + 40));
+                ctx5.fillStyle = "#99215F";
+                ctx5.fill();
+                
+                var image6 = document.getElementById("image6");
+                var ctx6 = image6.getContext("2d");
+                ctx6.fillStyle = "#176332";
+                ctx6.fillRect((canvas4.width/2 - 40), (canvas4.height/2 - 40), 80, 80);
+            }
+        </script>
+    </head>
+    
+    <body onload="draw();">
+        <ul>
+            <li><canvas id="image1"></canvas></li>
+            <li><canvas id="image2"></canvas></li>
+            <li><canvas id="image3"></canvas></li>
+            <li><canvas id="image4"></canvas></li>
+            <li><canvas id="image5"></canvas></li>
+            <li><canvas id="image6"></canvas></li>
+        </ul>
+    </body>
+</html>
