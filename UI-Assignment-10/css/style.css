@@ -1,0 +1,86 @@
+
+.btn-edit{
+	padding: 10px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.user-data:hover .btn-edit{
+	display: visible;
+}
+/*
+.row{
+	width: 100%;
+}
+.container{
+	width: 80%;
+	margin: auto;
+	padding: 20px 10px;
+	background-color: #d8d8d8;
+}
+
+.row{
+	display: flex;
+	width: 100%;
+	padding: 10px 0;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.row div:first-child {
+	padding-right: 30px;
+	text-align: right;
+	flex-basis: 40%
+}
+.input-field{
+	display: flex;
+	border: 1px solid #afafaf;
+   border-radius: 3px;
+}
+.input-field input,select,textarea{
+	width: 250px;
+	padding: 5px;
+}
+
+.input-field i{
+	border: 1px solid #afafaf;
+	border-right: 0px;
+	text-align: center;
+    padding: 5px 0px;
+    margin: 0px;
+    width: 35px;
+}
+
+input[type=text]:inValid{
+	border: 1px solid red;
+}
+
+input[type=text]:valid{
+	border: 1px solid green;
+}
+input[type=text]:focus {
+	border: none;
+
+}
+.btn i{
+	border:0;
+	padding:0;
+}
+.btn {
+   background-color: #EC9832;
+   width: 80px;
+   border-radius: 3px;
+   border: none;
+   color: white;
+   padding: 8px ;
+   cursor: pointer;
+}
+
+.phone i{
+	transform: scaleX(-1);
+	border-right: 1px solid #afafaf;
+}
+
+.input-textarea i{
+	padding: 10px 0px;
+}*/
