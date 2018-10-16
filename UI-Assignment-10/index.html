@@ -35,11 +35,11 @@
                     <input type='text' placeholder="Search users by name" class="border-0" ng-model="search.name" />
                 </div>
                 <div class="col-md-1">
-                    <input type='submit' value="Search" class="btn btn-secondary" ng-click="searchByName = search.name" />
+                    <input type='submit' value="Search" class="btn btn-secondary" />
                 </div>
             </div>
             <div class="row py-2">
-                <div class="col-md-4 p-2" ng-repeat="user in userData | filter : searchByName" />
+                <div class="col-md-4 p-2" ng-repeat="user in userData | filter : search" />
                 <div class="card d-flex flex-row user-data">
                     <div class="align-self-center">
                         <i class='fas fa-user fa-5x p-2'></i>
@@ -57,9 +57,6 @@
             </div>
         </div>
 
-
-
-
         <!-- The Modal -->
         <div class="modal" id="addUserModal">
             <div class="modal-dialog">
@@ -73,7 +70,6 @@
                     <form ng-submit="saveUser()">
                         <!-- Modal body -->
                         <div class="modal-body">
-
                             <input type="hidden" ng-model="user.id">
                             <div class="form-group">
                                 <label>Name:</label>
