@@ -18,7 +18,7 @@ userModule.controller('UsersController', function($scope, $http) {
 	   }else{
 	   		$http.put('http://localhost:3000/users/' + $scope.user.id,$scope.user);
 	   }
-	   //angular.element("#addUserModal").modal("hide");
+	   angular.element("#addUserModal").modal("hide");
 	   
        window.location.reload();
 	}
