@@ -70,6 +70,8 @@ component('shippingDetail',{
                     console.log(item.id);
                     $http.delete('http://localhost:3000/cart/' + self.items[item].id, item).then(function(response){
                         console.log("successfull");
+                        this.cartCount = $routeParams.cartCount;
+                        window.location.reload();
                     })
                 }
                 window.location="#!/products/order-success/";   
